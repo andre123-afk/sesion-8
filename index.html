@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sesión 1.8 - Eventos y eventos personalizados</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="etiqueta">JavaScript DOM</p>
+      <h1>Panel interactivo de productos</h1>
+      <p>Laboratorio para practicar eventos nativos, formularios y eventos personalizados.</p>
+    </header>
+
+    <section class="panel">
+      <h2>Registrar producto</h2>
+
+      <form id="formularioProducto" class="formulario">
+        <label for="nombreProducto">Nombre del producto</label>
+        <input id="nombreProducto" type="text" placeholder="Ej: Mouse inalámbrico">
+
+        <label for="precioProducto">Precio</label>
+        <input id="precioProducto" type="number" placeholder="Ej: 50000">
+
+        <label for="categoriaProducto">Categoría</label>
+        <select id="categoriaProducto">
+          <option value="">Selecciona una categoría</option>
+          <option value="Tecnología">Tecnología</option>
+          <option value="Oficina">Oficina</option>
+          <option value="Hogar">Hogar</option>
+        </select>
+
+        <button id="btnRegistrar" type="submit">Registrar producto</button>
+      </form>
+
+      <div class="estado">
+        <p><strong>Vista previa:</strong> <span id="previewNombre">Sin nombre</span></p>
+        <p><strong>Categoría seleccionada:</strong> <span id="previewCategoria">Ninguna</span></p>
+        <p id="mensajeEstado" class="mensaje">Completa el formulario para agregar un producto.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Productos agregados</h2>
+      <p>Total de productos: <strong id="contadorProductos">0</strong></p>
+      <div id="productosLista" class="productos-lista"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Historial de eventos</h2>
+      <div id="historialEventos" class="historial"></div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
